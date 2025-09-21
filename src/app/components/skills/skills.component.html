@@ -1,0 +1,15 @@
+<section class="page-section" id="skills">
+  <div class="container text-center fade-in">
+    <h2 class="section-title mb-3">My Skills</h2>
+    <p class="mb-5">Here are some of the technologies I work with:</p>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" *ngFor="let skill of skills">
+        <div class="skill-item p-3 text-center fade-in">
+          <img [src]="skill.icon" [alt]="skill.name" class="skill-icon mb-2">
+          <h6 class="mb-0">{{ skill.name }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

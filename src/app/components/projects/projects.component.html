@@ -1,0 +1,38 @@
+<section class="page-section projects">
+  <div class="container">
+    <h2 class="section-title mb-5 text-center fade-in-up">My Works</h2>
+
+    <div class="row g-4">
+      <div class="col-lg-6 col-md-12" *ngFor="let project of projects">
+        <div class="project-card shadow-lg p-3 fade-in-up">
+          <div class="project-image mb-3">
+            <img [src]="project.image" alt="{{project.title}}" class="img-fluid rounded">
+          </div>
+
+          <h4 class="project-title">
+            {{project.title}}
+          </h4>
+
+          <p class="project-desc">
+            {{project.fullDescription}}
+          </p>
+
+          <div class="tech-stack mb-3">
+            <span class="tech-badge" *ngFor="let tech of project.technologies">
+              {{tech}}
+            </span>
+          </div>
+
+          <div class="project-links mt-3">
+            <a [href]="project.github" target="_blank" class="me-3">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+<!--            <a [href]="project.live" target="_blank">-->
+<!--              <i class="fas fa-external-link-alt"></i> Link-->
+<!--            </a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

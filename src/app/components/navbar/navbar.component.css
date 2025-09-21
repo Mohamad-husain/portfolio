@@ -1,0 +1,50 @@
+.navbar {
+  padding: 1rem 2rem;
+  background-color: var(--dark-color) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #f39c12, #e74c3c, #c0392b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  margin: 0 0.7rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: transparent !important;
+  background: linear-gradient(90deg, #f39c12, #e74c3c, #c0392b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after,
+.nav-link.active::before,
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f39c12, #e74c3c, #c0392b);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  top: -4px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  bottom: -4px;
+}
