@@ -1,5 +1,6 @@
 <section class="page-section" id="contact">
   <div class="container text-center fade-in">
+
     <div class="connect-section fade-in mb-5">
       <h2 class="section-title mb-2">
         <i class="bi bi-envelope-fill"></i> Connect with <span class="highlight">Me</span>
@@ -7,9 +8,10 @@
       <p class="connect-desc">
         Feel free to reach out! I’m always open to discussing new projects or collaboration.
       </p>
+
       <div class="connect-buttons mt-3">
         <a href="https://wa.me/+972598610880" target="_blank" class="btn-social whatsapp">WhatsApp</a>
-        <a href="https://mail.google.com/mail/?view=cm&to=mohammad.hussain.se@gmail.com" target="_blank" class="btn-social email">Email</a>
+        <a href="mailto:mohammad.hussain.se@gmail.com" class="btn-social email">Email</a>
         <a href="https://www.linkedin.com/in/mohammad--hussain/" target="_blank" class="btn-social linkedin">LinkedIn</a>
       </div>
     </div>
@@ -18,24 +20,30 @@
       <div class="col-lg-8">
         <div class="contact-form fade-in">
           <p class="form-title">Send Mail & Let Comment</p>
-          <form #contactForm (ngSubmit)="sendEmail()">
+
+          <form>
             <div class="mb-3 fade-in">
-              <input type="text" class="form-control" name="name" placeholder="Your name" ngModel required />
+              <input type="text" class="form-control" placeholder="Your name" required />
             </div>
+
             <div class="mb-3 fade-in">
-              <input type="email" class="form-control" name="email" placeholder="Email" ngModel required />
+              <input type="email" class="form-control" placeholder="Email" required />
             </div>
+
             <div class="mb-3 fade-in">
-              <textarea class="form-control" rows="5" name="message" placeholder="Write your message..." ngModel required></textarea>
+              <textarea class="form-control" rows="5" placeholder="Write your message..." required></textarea>
             </div>
+
             <div class="d-flex justify-content-center gap-3 fade-in">
-              <button type="submit" class="btn-gradient">
+              <button type="button" class="btn-gradient">
                 Send <i class="bi bi-send-fill ms-1"></i>
               </button>
             </div>
           </form>
+
         </div>
       </div>
     </div>
+
   </div>
 </section>
