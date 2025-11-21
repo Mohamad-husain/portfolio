@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import emailjs from 'emailjs-com';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -10,17 +11,17 @@ import emailjs from 'emailjs-com';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  @ViewChild('contactForm') contactForm!: ElementRef<HTMLFormElement>;  // الحصول على الفورم HTML
+  @ViewChild('contactForm') contactForm!: ElementRef<HTMLFormElement>;
 
   sendEmail() {
     if (this.contactForm) {
       emailjs.sendForm(
-        'service_ma6i7kc',
-        'template_3zj0ubu',
-        this.contactForm.nativeElement,   // ✅ هنا نمرر العنصر HTML مباشرة
-        'K4_GaG8asrg_lmMZS'
+        environment.emailServiceId,
+        environment.emailTemplateId,
+        this.contactForm.nativeElement,
+        environment.emailPublicKey
       ).then(
-        (result) => {
+        () => {
           alert('Message sent successfully!');
           this.contactForm.nativeElement.reset();
         },
