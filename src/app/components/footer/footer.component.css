@@ -1,9 +1,9 @@
 .footer {
-  background: #1d2533;
-  color: #ff6b4a;
+  background: var(--color-surface);
+  color: var(--color-accent);
   text-align: center;
   padding: 1.5rem 0;
-  border-top: 2px solid #ff6b4a;
+  border-top: 2px solid rgba(100, 255, 218, 0.4);
 }
 
 .footer .footer-content {
@@ -21,7 +21,7 @@
 
 .footer .rights {
   font-size: 0.9rem;
-  color: #bbb;
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -32,12 +32,12 @@
 }
 
 .footer .social-icons a {
-  color: #ff6b4a;
+  color: var(--color-accent);
   font-size: 1.3rem;
   transition: all 0.3s ease;
 }
 
 .footer .social-icons a:hover {
-  color: #e91e63;
+  color: var(--color-white);
   transform: translateY(-3px);
 }

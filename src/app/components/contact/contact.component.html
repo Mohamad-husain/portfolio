@@ -1,15 +1,15 @@
 <section class="page-section" id="contact">
-  <div class="container text-center fade-in">
+  <div class="container text-center">
 
-    <div class="connect-section fade-in mb-5">
-      <h2 class="section-title mb-2">
+    <div class="connect-section mb-5">
+      <h2 class="section-title mb-2 fade-in stagger-1">
         <i class="bi bi-envelope-fill"></i> Connect with <span class="highlight">Me</span>
       </h2>
-      <p class="connect-desc">
+      <p class="connect-desc fade-in stagger-2">
         Feel free to reach out! I’m always open to discussing new projects or collaboration.
       </p>
 
-      <div class="connect-buttons mt-3">
+      <div class="connect-buttons mt-3 fade-in stagger-3">
         <a href="https://wa.me/+972598610880" target="_blank" class="btn-social whatsapp">WhatsApp</a>
         <a href="mailto:mohammad.hussain.se@gmail.com" class="btn-social email">Email</a>
         <a href="https://www.linkedin.com/in/mohammad--hussain/" target="_blank" class="btn-social linkedin">LinkedIn</a>
@@ -18,26 +18,59 @@
 
     <div class="row justify-content-center mt-4">
       <div class="col-lg-8">
-        <div class="contact-form fade-in">
+        <div class="contact-form fade-in stagger-4">
           <p class="form-title">Send Mail & Let Comment</p>
 
-          <form>
-            <div class="mb-3 fade-in">
-              <input type="text" class="form-control" placeholder="Your name" required />
+          <form (ngSubmit)="submit(contactForm)" #contactForm="ngForm" novalidate>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                [(ngModel)]="form.name"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+                minlength="2"
+              />
             </div>
 
-            <div class="mb-3 fade-in">
-              <input type="email" class="form-control" placeholder="Email" required />
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                [(ngModel)]="form.email"
+                placeholder="Email"
+                autocomplete="email"
+                required
+              />
             </div>
 
-            <div class="mb-3 fade-in">
-              <textarea class="form-control" rows="5" placeholder="Write your message..." required></textarea>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                rows="5"
+                name="message"
+                [(ngModel)]="form.message"
+                placeholder="Write your message..."
+                required
+                minlength="5"
+              ></textarea>
             </div>
 
-            <div class="d-flex justify-content-center gap-3 fade-in">
-              <button type="button" class="btn-gradient">
-                Send <i class="bi bi-send-fill ms-1"></i>
+            <div class="d-flex justify-content-center gap-3">
+              <button type="submit" class="btn-gradient" [disabled]="contactForm.invalid || isSubmitting">
+                <span *ngIf="!isSubmitting">Send <i class="bi bi-send-fill ms-1"></i></span>
+                <span *ngIf="isSubmitting">Sending...</span>
               </button>
+            </div>
+
+            <div class="form-status success" *ngIf="status === 'success'">
+              Your message has been sent. Thank you!
+            </div>
+            <div class="form-status error" *ngIf="status === 'error'">
+              {{ errorMessage }}
             </div>
           </form>
 

@@ -1,13 +1,23 @@
-<section class="page-section" id="skills">
-  <div class="container text-center fade-in">
-    <h2 class="section-title mb-3">My Skills</h2>
-    <p class="mb-5">Here are some of the technologies I work with:</p>
+<section class="page-section skills" id="skills">
+  <div class="container">
+    <div class="skills-header text-center reveal" style="--delay: 0.05s;">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="skills-subtitle">A structured view of my core technologies and tools.</p>
+    </div>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" *ngFor="let skill of skills">
-        <div class="skill-item p-3 text-center fade-in">
-          <img [src]="skill.icon" [alt]="skill.name" class="skill-icon mb-2">
-          <h6 class="mb-0">{{ skill.name }}</h6>
+    <div class="skills-groups">
+      <div class="skill-group reveal" *ngFor="let category of categories; let i = index"
+        [style.--delay]="(i * 0.12 + 0.15) + 's'">
+        <div class="group-header">
+          <h3 class="group-title">{{ category.title }}</h3>
+          <span class="group-count">{{ category.items.length }}</span>
+        </div>
+
+        <div class="skill-items">
+          <div class="skill-pill" *ngFor="let skill of category.items">
+            <img [src]="skill.icon" [alt]="skill.name">
+            <span>{{ skill.name }}</span>
+          </div>
         </div>
       </div>
     </div>

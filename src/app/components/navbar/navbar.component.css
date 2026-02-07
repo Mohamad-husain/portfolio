@@ -1,18 +1,19 @@
 .navbar {
   padding: 1rem 2rem;
-  background-color: var(--dark-color) !important;
+  background-color: var(--color-bg-alt) !important;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.12);
 }
 
 .navbar-brand {
   font-weight: 700;
   font-size: 1.8rem;
-  background: linear-gradient(90deg, #f39c12, #e74c3c, #c0392b);
+  background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--color-text) !important;
   font-weight: 500;
   margin: 0 0.7rem;
   position: relative;
@@ -22,7 +23,7 @@
 .nav-link:hover,
 .nav-link.active {
   color: transparent !important;
-  background: linear-gradient(90deg, #f39c12, #e74c3c, #c0392b);
+  background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -36,7 +37,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #f39c12, #e74c3c, #c0392b);
+  background: var(--gradient-accent);
 }
 
 .nav-link:hover::before,

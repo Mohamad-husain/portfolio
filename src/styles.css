@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #0ea5e9;
-  --dark-color: #0f172a;
-  --light-color: #f8fafc;
+  --color-bg: #0a192f;
+  --color-bg-alt: #112240;
+  --color-surface: #172a45;
+  --color-input: #0b1b33;
+  --color-text: #ccd6f6;
+  --color-text-muted: #8892b0;
+  --color-accent: #64ffda;
+  --color-white: #f8f9fa;
+  --gradient-accent: linear-gradient(90deg, #64ffda, #ccd6f6);
+  --gradient-accent-strong: linear-gradient(90deg, #64ffda, #f8f9fa);
 }
 
 * {
@@ -14,7 +20,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   overflow-x: hidden;
 }
 
