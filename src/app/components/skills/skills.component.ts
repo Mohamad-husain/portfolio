@@ -1,10 +1,11 @@
+import { RevealDirective, SpotlightDirective } from '../../shared/reveal.directive';
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RevealDirective, SpotlightDirective],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
@@ -32,6 +33,8 @@ export class SkillsComponent {
         { name: 'SCSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/sass/sass-original.svg' },
         { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg' },
         { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+        { name: 'React Native', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg' },
         { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg' }
       ]
     },

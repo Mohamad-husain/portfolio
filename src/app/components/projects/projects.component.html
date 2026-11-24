@@ -1,12 +1,12 @@
 <section class="page-section projects">
   <div class="container">
-    <h2 class="section-title mb-5 text-center fade-in-up" style="--delay: 0.05s;">My Works</h2>
+    <header class="text-center mb-5" appReveal><p class="page-kicker">IDEAS INTO EXPERIENCES</p><h1 class="section-title">Selected projects<span class="text-accent">.</span></h1><p class="page-subtitle">Web, mobile, and design — built with purpose.</p></header>
 
     <div class="row g-4">
       <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let project of projects; let i = index">
-        <div class="project-card fade-in-up" [style.--delay]="(i * 0.12 + 0.15) + 's'">
+        <div class="project-card" appReveal appSpotlight [style.--delay]="(i * 0.12 + 0.15) + 's'">
           <div class="project-image">
-            <img [src]="project.image" alt="{{project.title}}" class="img-fluid">
+            <img [src]="project.image" alt="{{project.title}}" class="img-fluid" [class.cover-contained]="project.image.endsWith('.svg')" loading="lazy" decoding="async">
             <span class="project-badge">{{ project.type }}</span>
           </div>
 

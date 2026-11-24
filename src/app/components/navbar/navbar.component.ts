@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,4 +10,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   isMenuCollapsed = true;
+  constructor(public router: Router) {}
+
+  @HostListener('document:keydown.escape')
+  closeMenu(): void { this.isMenuCollapsed = true; }
 }

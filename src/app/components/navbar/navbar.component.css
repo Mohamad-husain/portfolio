@@ -1,51 +1,12 @@
-.navbar {
-  padding: 1rem 2rem;
-  background-color: var(--color-bg-alt) !important;
-  border-bottom: 1px solid rgba(100, 255, 218, 0.12);
-}
-
-.navbar-brand {
-  font-weight: 700;
-  font-size: 1.8rem;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.nav-link {
-  color: var(--color-text) !important;
-  font-weight: 500;
-  margin: 0 0.7rem;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: transparent !important;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.nav-link:hover::before,
-.nav-link:hover::after,
-.nav-link.active::before,
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gradient-accent);
-}
-
-.nav-link:hover::before,
-.nav-link.active::before {
-  top: -4px;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  bottom: -4px;
-}
+.navbar{padding:1.1rem 0;background:#0a192fe8!important;backdrop-filter:blur(18px);border-bottom:1px solid #95b3c21c}
+.navbar-brand{color:#edf4ff!important;letter-spacing:-.07em}.brand-dot{color:var(--color-accent)}
+.nav-link{color:#a7b6cc!important;font-size:.875rem;font-weight:500;margin:0 .65rem;position:relative;transition:color .25s}
+.nav-link:hover,.nav-link.active{color:var(--color-accent)!important}
+.nav-link::after{content:'';position:absolute;height:2px;background:var(--color-accent);bottom:0;left:.5rem;right:.5rem;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav-link:hover::after,.nav-link.active::after{transform:scaleX(1)}
+.navbar-toggler{border-color:#64ffda40;font-size:1rem;padding:.5rem}
+.navbar{transition:box-shadow .3s,border-color .3s}
+.navbar-collapse.show{animation:menu-arrive .25s ease-out}
+@keyframes menu-arrive{from{opacity:0;translate:0 -8px}to{opacity:1;translate:0 0}}
+@media(max-width:991px){.navbar-collapse{padding-top:1rem}.nav-link{padding:.8rem .5rem;margin:0}.nav-link::after{right:auto;width:26px}.navbar{padding:1rem 0}}
+@media(prefers-reduced-motion:reduce){.nav-link,.nav-link::after,.navbar{transition:none}.navbar-collapse.show{animation:none}}

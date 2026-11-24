@@ -1,6 +1,6 @@
 .page-section.experience {
   background-color: var(--color-bg);
-  padding: 7rem 0;
+  padding: 8.5rem 0 5rem;
   position: relative;
   overflow: hidden;
   color: var(--color-text);
@@ -207,44 +207,8 @@
   background: rgba(17, 34, 64, 0.8);
 }
 
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(28px) scale(0.98);
-  filter: blur(6px);
-  will-change: transform, opacity, filter;
-}
-
-.fade-in-up.show {
-  animation: revealUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: var(--delay, 0s);
-}
-
-.fade-in-up.show .timeline-dot {
-  animation: pulse 2.2s ease-in-out infinite;
-}
-
-@keyframes revealUp {
-  0% {
-    opacity: 0;
-    transform: translateY(28px) scale(0.98);
-    filter: blur(6px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.5); }
-  70% { box-shadow: 0 0 0 12px rgba(100, 255, 218, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0); }
-}
-
-
 @media (max-width: 992px) {
-  .page-section.experience { padding: 5.5rem 0; }
+  .page-section.experience { padding: 7.5rem 0 3.5rem; }
   .section-title { font-size: 2rem; }
   .experience-timeline { padding-left: 34px; }
   .timeline-dot { left: -26px; }

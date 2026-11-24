@@ -1,15 +1,20 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer-content">
-      <p class="brand">Mohammad © 2025</p>
-      <p class="rights">All rights reserved.</p>
-
-      <div class="social-icons">
-        <a href="https://www.facebook.com/mohammad.hoseen.754"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/hmood.husain/"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/mohammad--hussain/"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Mohamad-husain"><i class="bi bi-github"></i></a>
+    <div class="footer-main">
+      <a class="footer-identity" routerLink="/home" aria-label="Mohammad Hussain home">
+        <span class="brand-mark" aria-hidden="true">MH<span>.</span></span>
+        <span class="identity-copy"><strong>Mohammad Hussain</strong><span>Full-Stack Developer &amp; QA Engineer</span></span>
+      </a>
+      <div class="footer-social"><span class="connect-label">Let's connect</span>
+        <div class="social-icons" aria-label="Social links">
+          <a class="whatsapp" href="https://wa.me/972598610880" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://github.com/Mohamad-husain" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/mohammad--hussain/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/hmood.husain/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/mohammad.hoseen.754" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+        </div>
       </div>
     </div>
+    <div class="footer-bottom"><p>&copy; {{ currentYear }} Mohammad Hussain. All rights reserved.</p><nav aria-label="Footer navigation"><a routerLink="/projects">Projects</a><a routerLink="/experience">Experience</a><a routerLink="/contact">Contact</a></nav></div>
   </div>
 </footer>

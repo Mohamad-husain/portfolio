@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold fs-3" routerLink="/home">PORTFOLIO</a>
-    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    <a class="navbar-brand fw-bold fs-3" routerLink="/home" (click)="isMenuCollapsed = true" aria-label="Mohammad Hussain home">MH<span class="brand-dot">.</span></a>
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" [attr.aria-expanded]="!isMenuCollapsed" aria-controls="main-navigation" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" [class.show]="!isMenuCollapsed">
-      <ul class="navbar-nav ms-auto">
+    <div id="main-navigation" class="collapse navbar-collapse" [class.show]="!isMenuCollapsed">
+      <ul class="navbar-nav ms-auto" (click)="isMenuCollapsed = true">
         <li class="nav-item">
           <a class="nav-link" routerLink="/home" href="/home" routerLinkActive="active"
-             [routerLinkActiveOptions]="{exact: true}">Home</a>
+             [routerLinkActiveOptions]="{exact: true}" [class.active]="router.url === '/'">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/about" href="/about" routerLinkActive="active">About</a>

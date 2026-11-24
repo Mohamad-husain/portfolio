@@ -1,99 +1,31 @@
-<section class="page-section about" id="about">
+<section class="about-page" aria-labelledby="about-title">
   <div class="container">
-    <div class="about-header reveal stagger-1">
-      <h2 class="section-title">About Me</h2>
-      <p class="about-subtitle">Full-Stack Developer • QA Engineer</p>
-    </div>
-
-    <div class="row g-4 align-items-stretch">
-      <div class="col-lg-7">
-        <div class="about-card reveal stagger-2">
-          <h3 class="about-title">Building reliable, elegant web products</h3>
-          <p class="lead">
-            I am a fourth-year software engineering student and full-stack software developer with a passion for building
-            innovative and user-friendly applications.
-          </p>
-          <p class="lead">
-            <span class="highlight">My experience covers modern web technologies</span>, such as
-            <span class="highlight">React</span>, <span class="highlight">Angular</span>,
-            <span class="highlight">Laravel</span>, and <span class="highlight">Node.js</span>, where I focus on creating
-            scalable and efficient solutions.
-          </p>
-          <p class="lead">
-            I currently work at <span class="highlight">AIpilot LLC</span> as a <span class="highlight">Full-Stack Developer</span>.
-          </p>
-          <p class="lead">
-            I also have strong experience and passion in software testing, both manual and automation, ensuring that
-            applications are reliable, high-quality, and deliver excellent user experiences. I enjoy tackling complex
-            problems and turning ideas into digital products that deliver real impact.
-          </p>
-          <div class="chip-row">
-            <span class="chip">React</span>
-            <span class="chip">Angular</span>
-            <span class="chip">Laravel</span>
-            <span class="chip">Node.js</span>
-            <span class="chip">API Design</span>
-            <span class="chip">Test Automation</span>
-          </div>
+    <div class="about-layout">
+      <div class="about-copy entrance">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h1 id="about-title">About Me<span>.</span></h1>
+        <h2>I build with purpose.<br><span>I test with care.</span></h2>
+        <p class="bio">I'm <strong>Mohammad Hussain</strong>, a software engineering student, Full-Stack Developer, and QA Engineer creating thoughtful web and mobile experiences.</p>
+        <p class="previous-role">Previously a Full-Stack Developer at <strong>AIPilot LLC</strong>.</p>
+        <div class="about-links">
+          <a routerLink="/projects" class="primary-link">Explore my work</a>
+          <a routerLink="/experience" class="secondary-link">My experience <i class="bi bi-briefcase" aria-hidden="true"></i></a>
         </div>
       </div>
 
-      <div class="col-lg-5">
-        <div class="about-card about-side reveal stagger-3">
-          <div class="role-now">
-            <span class="pill">Now</span>
-            <div>
-              <div class="role-company">AIpilot LLC</div>
-              <div class="role-title">Full-Stack Developer</div>
-            </div>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="about-points">
-            <div class="point">
-              <span class="point-dot"></span>
-              <div>
-                <div class="point-title">Product Engineering</div>
-                <div class="point-desc">From idea to delivery with clean UI and scalable APIs.</div>
-              </div>
-            </div>
-            <div class="point">
-              <span class="point-dot"></span>
-              <div>
-                <div class="point-title">Quality Mindset</div>
-                <div class="point-desc">Manual and automated testing for stability and performance.</div>
-              </div>
-            </div>
-            <div class="point">
-              <span class="point-dot"></span>
-              <div>
-                <div class="point-title">Clean Code</div>
-                <div class="point-desc">Maintainable architecture and thoughtful component design.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-grid">
-            <div class="stat">
-              <div class="stat-value">FS</div>
-              <div class="stat-label">Full-Stack</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">QA</div>
-              <div class="stat-label">Automation</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">API</div>
-              <div class="stat-label">Design</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">UX</div>
-              <div class="stat-label">Polish</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <aside class="quality-card" appReveal appSpotlight aria-labelledby="quality-title">
+        <div class="quality-top"><span>QUALITY IN PRACTICE</span><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+        <div class="duration"><strong>6</strong><span>months of<br>hands-on training</span></div>
+        <h2 id="quality-title">Asal Technologies</h2>
+        <p>QA training in manual testing and automation.</p>
+        <div class="testing-tags"><span><i class="bi bi-check2" aria-hidden="true"></i> Manual Testing</span><span><i class="bi bi-check2" aria-hidden="true"></i> Test Automation</span></div>
+      </aside>
     </div>
+
+    <section class="expertise" appReveal aria-label="Areas of expertise">
+      <div class="expertise-item"><span class="expertise-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></span><div><h2>Web &amp; Mobile</h2><p>Full-stack development</p></div></div>
+      <div class="expertise-item"><span class="expertise-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span><div><h2>Quality Assurance</h2><p>Manual &amp; automated testing</p></div></div>
+      <div class="expertise-item"><span class="expertise-icon data-icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></span><div><h2>Data Analysis</h2><p>Python &amp; SQL · Udacity training</p></div></div>
+    </section>
   </div>
 </section>

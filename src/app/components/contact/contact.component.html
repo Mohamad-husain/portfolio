@@ -1,82 +1,27 @@
-<section class="page-section" id="contact">
-  <div class="container text-center">
-
-    <div class="connect-section mb-5">
-      <h2 class="section-title mb-2 fade-in stagger-1">
-        <i class="bi bi-envelope-fill"></i> Connect with <span class="highlight">Me</span>
-      </h2>
-      <p class="connect-desc fade-in stagger-2">
-        Feel free to reach out! I’m always open to discussing new projects or collaboration.
-      </p>
-
-      <div class="connect-buttons mt-3 fade-in stagger-3">
-        <a href="https://wa.me/+972598610880" target="_blank" class="btn-social whatsapp">WhatsApp</a>
-        <a href="mailto:mohammad.hussain.se@gmail.com" class="btn-social email">Email</a>
-        <a href="https://www.linkedin.com/in/mohammad--hussain/" target="_blank" class="btn-social linkedin">LinkedIn</a>
+<section class="contact-page" aria-labelledby="contact-title">
+  <div class="container contact-layout">
+    <div class="contact-copy" appReveal>
+      <p class="page-kicker">LET'S CONNECT</p>
+      <h1 id="contact-title">Have an idea?<br><span>Let's make it real.</span></h1>
+      <p class="contact-intro">Have a project, an opportunity, or a question? I'd love to hear from you.</p>
+      <div class="contact-options">
+        <a href="https://wa.me/972598610880" target="_blank" rel="noopener noreferrer"><span class="channel-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span><span><strong>WhatsApp</strong><span>Start a conversation</span></span><i class="bi bi-chat-dots" aria-hidden="true"></i></a>
+        <a href="mailto:mohammad.hussain.se@gmail.com"><span class="channel-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span><span><strong>Email</strong><span>mohammad.hussain.se&#64;gmail.com</span></span><i class="bi bi-envelope-open" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/mohammad--hussain/" target="_blank" rel="noopener noreferrer"><span class="channel-icon"><i class="bi bi-linkedin" aria-hidden="true"></i></span><span><strong>LinkedIn</strong><span>Connect professionally</span></span><i class="bi bi-person-plus" aria-hidden="true"></i></a>
       </div>
     </div>
-
-    <div class="row justify-content-center mt-4">
-      <div class="col-lg-8">
-        <div class="contact-form fade-in stagger-4">
-          <p class="form-title">Send Mail & Let Comment</p>
-
-          <form (ngSubmit)="submit(contactForm)" #contactForm="ngForm" novalidate>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                name="name"
-                [(ngModel)]="form.name"
-                placeholder="Your name"
-                autocomplete="name"
-                required
-                minlength="2"
-              />
-            </div>
-
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                name="email"
-                [(ngModel)]="form.email"
-                placeholder="Email"
-                autocomplete="email"
-                required
-              />
-            </div>
-
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                rows="5"
-                name="message"
-                [(ngModel)]="form.message"
-                placeholder="Write your message..."
-                required
-                minlength="5"
-              ></textarea>
-            </div>
-
-            <div class="d-flex justify-content-center gap-3">
-              <button type="submit" class="btn-gradient" [disabled]="contactForm.invalid || isSubmitting">
-                <span *ngIf="!isSubmitting">Send <i class="bi bi-send-fill ms-1"></i></span>
-                <span *ngIf="isSubmitting">Sending...</span>
-              </button>
-            </div>
-
-            <div class="form-status success" *ngIf="status === 'success'">
-              Your message has been sent. Thank you!
-            </div>
-            <div class="form-status error" *ngIf="status === 'error'">
-              {{ errorMessage }}
-            </div>
-          </form>
-
-        </div>
-      </div>
+    <div class="contact-form" appReveal appSpotlight>
+      <h2>Send a message<span>.</span></h2>
+      <p class="form-intro">Tell me a little about what you have in mind.</p>
+      <form (ngSubmit)="submit(contactForm)" #contactForm="ngForm" novalidate [attr.aria-busy]="isSubmitting">
+        <div class="field"><label for="contact-name">Your name</label><input id="contact-name" name="name" [(ngModel)]="form.name" #nameField="ngModel" autocomplete="name" placeholder="Your full name" required minlength="2" [attr.aria-invalid]="nameField.touched && nameField.invalid" aria-describedby="name-error"><p id="name-error" class="field-error" *ngIf="nameField.touched && nameField.invalid">Please enter at least two characters.</p></div>
+        <div class="field"><label for="contact-email">Email address</label><input id="contact-email" type="email" name="email" [(ngModel)]="form.email" #emailField="ngModel" autocomplete="email" placeholder="you@example.com" required email [attr.aria-invalid]="emailField.touched && emailField.invalid" aria-describedby="email-error"><p id="email-error" class="field-error" *ngIf="emailField.touched && emailField.invalid">Please enter a valid email address.</p></div>
+        <div class="field"><label for="contact-message">Your message</label><textarea id="contact-message" rows="5" name="message" [(ngModel)]="form.message" #messageField="ngModel" placeholder="A project, a collaboration, or just a hello..." required minlength="5" [attr.aria-invalid]="messageField.touched && messageField.invalid" aria-describedby="message-error"></textarea><p id="message-error" class="field-error" *ngIf="messageField.touched && messageField.invalid">Please write at least five characters.</p></div>
+        <button type="submit" [disabled]="contactForm.invalid || isSubmitting"><span *ngIf="!isSubmitting">Send message <i class="bi bi-send" aria-hidden="true"></i></span><span *ngIf="isSubmitting"><i class="bi bi-hourglass-split" aria-hidden="true"></i> Sending...</span></button>
+        <div class="form-status" role="status" aria-live="polite"><p class="success" *ngIf="status === 'success'"><i class="bi bi-check-circle" aria-hidden="true"></i> Your message has been sent. Thank you!</p><p class="error" *ngIf="status === 'error'">{{ errorMessage }}</p></div>
+        <div class="delivery-fallback" *ngIf="status === 'error'"><a [href]="emailDraftUrl"><i class="bi bi-envelope" aria-hidden="true"></i> Open message in your email app</a><span>Review the draft and send it from your email app.</span></div>
+        <details class="delivery-details" *ngIf="showDiagnostics && deliveryDetails" open><summary>Delivery details (development only)</summary><p>{{ deliveryDetails }}</p></details>
+      </form>
     </div>
-
   </div>
 </section>

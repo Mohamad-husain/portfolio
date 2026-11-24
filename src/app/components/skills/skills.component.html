@@ -1,12 +1,13 @@
 <section class="page-section skills" id="skills">
   <div class="container">
-    <div class="skills-header text-center reveal" style="--delay: 0.05s;">
-      <h2 class="section-title">Skills & Technologies</h2>
+    <div class="skills-header text-center" appReveal style="--delay: 0.05s;">
+      <p class="page-kicker">THE TOOLS BEHIND THE WORK</p>
+      <h1 class="section-title">Skills &amp; Technologies<span class="text-accent">.</span></h1>
       <p class="skills-subtitle">A structured view of my core technologies and tools.</p>
     </div>
 
     <div class="skills-groups">
-      <div class="skill-group reveal" *ngFor="let category of categories; let i = index"
+      <div class="skill-group" appReveal appSpotlight *ngFor="let category of categories; let i = index"
         [style.--delay]="(i * 0.12 + 0.15) + 's'">
         <div class="group-header">
           <h3 class="group-title">{{ category.title }}</h3>
@@ -15,7 +16,7 @@
 
         <div class="skill-items">
           <div class="skill-pill" *ngFor="let skill of category.items">
-            <img [src]="skill.icon" [alt]="skill.name">
+            <img [src]="skill.icon" [alt]="skill.name" width="22" height="22" loading="lazy" decoding="async">
             <span>{{ skill.name }}</span>
           </div>
         </div>

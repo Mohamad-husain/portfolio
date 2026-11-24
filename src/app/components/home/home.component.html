@@ -1,42 +1,53 @@
-<section class="hero">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 col-md-12 mb-5 mb-lg-0 text-center text-lg-start fade-in">
-        <h1 class="fw-bold mb-4 fade-in stagger-1">
-          Hi, <br />
-          I'm <span class="highlight">Mohammad Hussain</span>
-        </h1>
-        <h2 class="mb-3 fade-in stagger-2">
-          <span class="highlight typing-text">Full-Stack Developer</span>
-        </h2>
-        <p class="role-secondary mb-4 fade-in stagger-3">QA Engineer • Test Automation</p>
-        <p class="hero-summary mb-5 fade-in stagger-4">
-          I build scalable web products with clean interfaces, strong performance, and reliable quality.
-        </p>
-
-        <div class="follow-me text-center fade-in stagger-5">
-          <h4 class="fw-semibold mb-3">Follow Me</h4>
-          <div class="social-icons mt-3">
-            <a href="https://www.facebook.com/mohammad.hoseen.754" class="mx-3 fs-1"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/hmood.husain/" class="mx-3 fs-1"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/mohammad--hussain/" class="mx-3 fs-1"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Mohamad-husain" class="mx-3 fs-1"><i class="fab fa-github"></i></a>
-          </div>
-          <div class="download-cv mt-4">
-            <a href="https://drive.google.com/file/d/1YqmUb22s4YVSviLDeEEqA-nlnSqiXysG/view?usp=sharing" target="_blank" rel="noopener" class="btn-cv">
-              <i class="fas fa-download me-2"></i> Download CV
-            </a>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="container hero-container">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow enter">FULL-STACK DEVELOPER &amp; QA ENGINEER</p>
+        <h1 id="hero-title" class="enter delay-one"><span class="hello">Hi, I'm</span> Mohammad<span class="name-line">Hussain<span class="name-dot">.</span></span></h1>
+        <h2 class="hero-statement enter delay-two">Thoughtful code.<br><span>Remarkable experiences.</span></h2>
+        <p class="hero-summary enter delay-three">I turn ideas into polished web products — pairing creative interfaces with scalable engineering and a passion for quality.</p>
+        <div class="hero-actions enter delay-three">
+          <a routerLink="/projects" class="action action-primary"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Explore my work</a>
+          <a href="assets/CV/MohammadHussain-CV.pdf" download="MohammadHussain-CV.pdf" class="action action-secondary"><i class="bi bi-download" aria-hidden="true"></i> Download CV</a>
+        </div>
+        <div class="follow-me enter delay-four">
+          <span>Follow me</span><span class="social-rule" aria-hidden="true"></span>
+          <div class="social-links">
+            <a href="https://wa.me/972598610880" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://github.com/Mohamad-husain" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/mohammad--hussain/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/hmood.husain/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/mohammad.hoseen.754" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
-
-      <div class="col-lg-6 col-md-12 text-center fade-in stagger-6">
-        <div class="code-box">
-          <i class="fas fa-code fa-4x"></i>
-          <h2 class="fw-bold mt-3">Full-Stack</h2>
-          <p class="code-role">Developer • QA Engineer</p>
+      <div class="hero-visual enter delay-two" (pointermove)="moveScene($event)" (pointerleave)="resetScene()">
+        <div class="orbital-ring ring-one" aria-hidden="true"></div><div class="orbital-ring ring-two" aria-hidden="true"></div>
+        <span class="orbit-symbol symbol-react" aria-hidden="true"><i class="fa-brands fa-react"></i></span><span class="orbit-symbol symbol-code" aria-hidden="true">&lt;/&gt;</span>
+        <div class="editor-scene" [style.transform]="'perspective(1000px) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)'">
+          <div class="editor-window">
+            <div class="editor-top"><span class="window-dots" aria-hidden="true"><b></b><b></b><b></b></span><span>developer.ts</span><i class="bi bi-code-slash" aria-hidden="true"></i></div>
+            <div class="editor-breadcrumb">portfolio <span>/</span> creative-engineering</div>
+            <pre class="editor-code" aria-label="Developer profile in TypeScript"><code><span class="code-purple">const</span> developer = {{ '{' }}
+  name: <span class="code-mint">'Mohammad Hussain'</span>,
+  focus: <span class="code-mint">'Full-Stack Development'</span>,
+  mindset: <span class="code-mint">'Quality first'</span>,
+  stack: [
+    <span class="code-mint">'Angular'</span>, <span class="code-mint">'React'</span>,
+    <span class="code-mint">'Laravel'</span>, <span class="code-mint">'Node.js'</span>
+  ],
+  <span class="code-blue">build</span>: () <span class="code-purple">=&gt;</span> <span class="code-mint">'Something great'</span>
+{{ '}' }};</code></pre>
+            <div class="editor-bottom"><span><i class="bi bi-git" aria-hidden="true"></i> main</span><span>TypeScript <i class="bi bi-check2" aria-hidden="true"></i></span></div>
+          </div>
+          <div class="floating-note note-quality"><span class="note-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span><div><strong>Built with confidence</strong><span>Tested. Refined. Ready.</span></div></div>
+          <div class="floating-note note-craft"><i class="bi bi-braces" aria-hidden="true"></i><span>From idea to experience</span></div>
         </div>
+        <p class="visual-caption">CREATIVITY MEETS ENGINEERING</p>
       </div>
     </div>
   </div>
 </section>
+<app-home-work></app-home-work>
