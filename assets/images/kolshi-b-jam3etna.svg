@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="440" gradientUnits="userSpaceOnUse"><stop stop-color="#102b40"/><stop offset="1" stop-color="#173d48"/></linearGradient>
+    <linearGradient id="screen" x1="640" y1="40" x2="830" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#245869"/><stop offset="1" stop-color="#10283b"/></linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1000v440H0z"/>
+  <g stroke="#64ffda" opacity=".1"><circle cx="750" cy="220" r="170"/><circle cx="750" cy="220" r="225"/><circle cx="750" cy="220" r="280"/></g>
+  <text x="70" y="153" fill="#64ffda" font-family="Segoe UI,Arial,sans-serif" font-size="17" letter-spacing="4">CAMPUS LIFE, CONNECTED</text>
+  <text x="67" y="219" fill="#edf5ff" font-family="Segoe UI,Arial,sans-serif" font-size="48" font-weight="700">Kolshi B Jam3etna</text>
+  <text x="70" y="260" fill="#a8becd" font-family="Segoe UI,Arial,sans-serif" font-size="22">Your university. Your community.</text>
+  <rect x="70" y="297" width="146" height="36" rx="18" stroke="#64ffda" stroke-opacity=".3" fill="#64ffda" fill-opacity=".06"/>
+  <text x="91" y="321" fill="#9eead8" font-family="Segoe UI,Arial,sans-serif" font-size="16">React Native</text>
+  <g transform="rotate(8 754 220)">
+    <rect x="649" y="36" width="210" height="372" rx="34" fill="#091b2a" stroke="#618e9c" stroke-width="3"/>
+    <rect x="660" y="47" width="188" height="350" rx="25" fill="url(#screen)"/>
+    <rect x="720" y="55" width="68" height="12" rx="6" fill="#091b2a"/>
+    <path d="m708 148 46-25 46 25-46 25-46-25Zm17 11v26c18 13 40 13 58 0v-26m17-11v39" stroke="#64ffda" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#64ffda" fill-opacity=".09" stroke="#64ffda" stroke-opacity=".2"><rect x="679" y="218" width="66" height="58" rx="12"/><rect x="762" y="218" width="66" height="58" rx="12"/><rect x="679" y="293" width="66" height="58" rx="12"/><rect x="762" y="293" width="66" height="58" rx="12"/></g>
+    <g stroke="#abd9dc" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"><path d="M698 236h13v23h-13v-23Zm13 0h13v23h-13m70-24h27v25h-27v-25Zm0 8h27m-21-12v8m15-8v8M699 312h27v18h-13l-7 6v-6h-7v-18Zm88 19v-9a8 8 0 0 1 16 0v9m-20 0h24m-14 5h4"/></g>
+    <path d="M734 384h40" stroke="#7796a5" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
